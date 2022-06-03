@@ -1,0 +1,7 @@
+<p>motos-filtrage-type works!</p>
+
+<div *ngFor="let moto of motos">
+    <div *ngIf="moto.type == (type | titlecase)">
+<p>{{moto.prix}}</p>
+</div>
+</div>
