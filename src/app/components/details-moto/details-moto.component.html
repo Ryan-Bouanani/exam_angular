@@ -1,14 +1,19 @@
-<!-- 
-<mat-card class="example-card center" *ngIf="playerDeId">
-    <mat-card-header>
-      <mat-card-title>{{playerDeId.prenom}}</mat-card-title>
-      <mat-card-subtitle>{{playerDeId.nom}}</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="{{playerDeId.image}}" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-      <p>
-        Poste : {{playerDeId.poste}}
-      </p>
-    </mat-card-content>
-  </mat-card> -->
-lol
+<button mat-raised-button color="primary" class="mt" [routerLink]="['/']">RETOUR </button>
+
+<div class="h1">
+<h1>Details Moto</h1>
+</div>
+<div *ngIf="motoDeId"  class="container">
+  <div  class="card">
+    <mat-card class="example-card">
+      <img mat-card-image src="{{motoDeId.image}}" alt="Photo moto">
+      <mat-card-content class="text-center">
+        <mat-card-title>{{motoDeId.nom}}</mat-card-title>
+        <p class="price">{{motoDeId.prix}}€</p>
+        <p>Année: {{motoDeId.annee}}€</p>
+        <p>Kilometrage: {{motoDeId.kilometres}}Km</p>
+        <p>Cylindre: {{motoDeId.cylindree}}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

@@ -68,7 +68,7 @@ header .logo span{
 }
 
 
-@media screen and (max-width:992px) {
+@media screen and (max-width:568px) {
 .menu_toggle {
         display: block;
     }

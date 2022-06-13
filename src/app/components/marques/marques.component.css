@@ -1,0 +1,22 @@
+
+.card {
+    width: 300px !important;
+    max-width: 300px !important;
+    height: 450px;
+    position: relative;
+}
+button {
+position: absolute;
+bottom: 0;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+img {
+    height: 200px;
+    object-fit: cover;
+}

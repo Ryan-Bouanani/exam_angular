@@ -1,3 +1,8 @@
+
+<div class="h1 mt">
+  <h1>Motos à la une</h1>
+  </div>
+
 <div *ngIf="motos"  class="container">
   <div *ngFor="let moto of motos" class="card" [ngClass]="{'none': moto.venteFlash != true}">
     <mat-card class="example-card" *ngIf="moto.venteFlash == true">
@@ -8,7 +13,7 @@
       <img mat-card-image src="{{moto.image}}" alt="Photo moto">
       <mat-card-content class="text-center">
         <mat-card-title>{{moto.nom}}</mat-card-title>
-        <p>{{moto.prix}}€</p>
+        <p class="price">{{moto.prix}}€</p>
       </mat-card-content>
       <mat-card-actions class="mb">
         <button mat-raised-button color="primary" [routerLink]="['/', moto.id]">ACHETER MOTO</button>

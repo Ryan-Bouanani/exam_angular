@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./motos-type.component.css']
 })
 export class MotosTypeComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit(): void {

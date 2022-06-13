@@ -1,7 +1,26 @@
-<p>motos-filtrage-type works!</p>
 
-<div *ngFor="let moto of motos">
-    <div *ngIf="moto.type == (type | titlecase)">
-<p>{{moto.prix}}</p>
-</div>
-</div>
+
+<button mat-raised-button color="primary" class="mt" [routerLink]="['/type']">RETOUR </button>
+
+<div class="h1">
+  <h1>Types Motos</h1>
+  </div>
+<div *ngIf="motos"  class="container">
+    <div *ngFor="let moto of motos" class="card" [ngClass]="{'none': moto.type != (type | titlecase)}">
+      <mat-card class="example-card" *ngIf="moto.type == (type | titlecase)">
+        <!-- <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+       
+      </mat-card-header> -->
+        <img mat-card-image src="{{moto.image}}" alt="Photo moto">
+        <mat-card-content class="text-center">
+          <mat-card-title>{{moto.nom}}</mat-card-title>
+          <p class="price">{{moto.prix}}€</p>
+        </mat-card-content>
+        <mat-card-actions class="mb">
+          <button mat-raised-button color="primary" [routerLink]="['/', moto.id]">ACHETER MOTO</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+  

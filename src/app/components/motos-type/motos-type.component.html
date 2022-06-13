@@ -1,4 +1,84 @@
-<button mat-raised-button color="primary" [routerLink]="['/type/custom']">Custom</button>
-<button mat-raised-button color="primary" [routerLink]="['/type/roadster']">Roadster</button>
-<button mat-raised-button color="primary" [routerLink]="['/type/sportive']">Sportive</button>
-<button mat-raised-button color="primary" [routerLink]="['/type/enduro']">Enduro</button>
+
+<div class="container">
+
+  <mat-card class="card">
+    <mat-card-header>
+      <div mat-card-avatar class="imgType"></div>
+      <mat-card-title>Custom</mat-card-title>
+
+    </mat-card-header>
+    <img mat-card-image
+      src="https://moto-station.com/wp-content/uploads/2020/05/05/Hyosung-Bobber-300-2020-2-Copier-315x209.jpg"
+      alt="Photo type moto">
+    <mat-card-content class="text-center">
+      <p>
+        Le custom, ou cruiser, désigne donc une moto "à l'américaine", taillée pour les longues routes rectilignes
+        d'outre-Atlantique.
+      </p>
+    </mat-card-content>
+    <mat-card-actions class="mb">
+      <button mat-raised-button color="primary" [routerLink]="['/type/custom']">VOIR CUSTOM</button>
+    </mat-card-actions>
+  </mat-card>
+
+
+  <mat-card class="card">
+    <mat-card-header>
+      <div mat-card-avatar class="imgType"></div>
+      <mat-card-title>Roadster</mat-card-title>
+
+    </mat-card-header>
+    <img mat-card-image
+      src="https://sf2.autoplus.fr/wp-content/uploads/autoplus/2022/01/damon-hyperfighter-colossus-2022.jpg"
+      alt="Photo type moto">
+    <mat-card-content class="text-center">
+      <p>
+        Une moto roadster est une moto classée entre les catégories routière et sportive, privilégiant la maniabilité au détriment du confort. 
+      </p>
+    </mat-card-content>
+    <mat-card-actions class="mb">
+      <button mat-raised-button color="primary" [routerLink]="['/type/roadster']">VOIR ROADSTER</button>
+    </mat-card-actions>
+  </mat-card>
+
+
+  <mat-card class="card">
+    <mat-card-header>
+      <div mat-card-avatar class="imgType"></div>
+      <mat-card-title>Sportive</mat-card-title>
+
+    </mat-card-header>
+    <img mat-card-image
+      src="https://i.pinimg.com/originals/a3/b3/e4/a3b3e4eb3f09dd6c8530f40383c2c3e7.jpg"
+      alt="Photo type moto">
+    <mat-card-content class="text-center">
+      <p>
+        Une moto sportive désigne une catégorie de motocyclette se distinguant visuellement du reste de la production
+        par un carénage.
+      </p>
+    </mat-card-content>
+    <mat-card-actions class="mb">
+      <button mat-raised-button color="primary" [routerLink]="['/type/sportive']">VOIR SPORTIVE</button>
+    </mat-card-actions>
+  </mat-card>
+
+
+  <mat-card class="card">
+    <mat-card-header>
+      <div mat-card-avatar class="imgType"></div>
+      <mat-card-title>Enduro</mat-card-title>
+
+    </mat-card-header>
+    <img mat-card-image
+      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQnkNom1ABYLRK6MxMgMUbTirp7hNNQBvQgc7s08x0Fi0bw_r6D9UDM08sjZhIIKf1pkg&usqp=CAU"
+      alt="Photo type moto">
+    <mat-card-content class="text-center">
+      <p>
+        L'enduro est une discipline de compétition de moto tout-terrain. L'épreuve se compose d'un parcours à réaliser dans un temps imparti.
+      </p>
+    </mat-card-content>
+    <mat-card-actions class="mb">
+      <button mat-raised-button color="primary" [routerLink]="['/type/Enduro']">VOIR ENDURO</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

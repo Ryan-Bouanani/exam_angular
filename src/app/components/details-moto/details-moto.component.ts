@@ -9,7 +9,7 @@ import { MotosService } from 'src/app/services/motos.service';
   styleUrls: ['./details-moto.component.css']
 })
 export class DetailsMotoComponent implements OnInit {
-  MotoDeId!: Motos;
+  motoDeId!: Motos;
 
   constructor(private motosService : MotosService, private activatedRoute : ActivatedRoute) { }
 
@@ -17,7 +17,7 @@ export class DetailsMotoComponent implements OnInit {
     let id : number = parseInt(<string>this.activatedRoute.snapshot.paramMap.get('id'));
 
     this.motosService.detailMoto(id).subscribe(data => {
-      this.MotoDeId = data;
+      this.motoDeId = data;
     })
   }
 

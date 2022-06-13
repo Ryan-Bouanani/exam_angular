@@ -21,15 +21,18 @@
   </nav> -->
 
   <header>
-  <div class="menu_toggle responsive" (click)="menuToggle()" [ngClass]="{'responsive' : toggle == true}">
-    <mat-icon>
+  <div class="menu_toggle" (click)="menuToggle()">
+    <mat-icon *ngIf="!toggle">
       menu
+      </mat-icon>          
+    <mat-icon *ngIf="toggle">
+      close
       </mat-icon>          
 </div>
 <div class="logo">
     <p><span>Luxe</span>Motos</p>
 </div>
-<ul class="menu ">
+<ul class="menu" [ngClass]="{'responsive' : toggle == true}">
     <li><a [routerLink]="['/']">Home</a></li>
     <li><a [routerLink]="['/type']">Types de motos</a></li>
     <li><a [routerLink]="['/marque']">Marques</a></li>

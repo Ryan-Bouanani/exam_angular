@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class MotosService {
   apiUrl = environment.apiUrl + 'motos.json';
+  apiUrlDetail = environment.apiUrl;
 
   constructor(private httpClient : HttpClient) { }
   
@@ -16,13 +17,13 @@ motos() :Observable<Motos[]> {
   return this.httpClient.get<Motos[]>(this.apiUrl);
 }
 detailMoto(id : number) {
-  return this.httpClient.get(this.apiUrl + '/' + id)
+  return this.httpClient.get(this.apiUrlDetail + 'motos/' + id + '.json')
 }
 type(type : string) :Observable<Motos[]> {
   return this.httpClient.get<Motos[]>(this.apiUrl + '?/type=' + type)
 }
-marque(marque : string) {
-  return this.httpClient.get(this.apiUrl + '?/marque=' + marque)
+marque(marque : string):Observable<Motos[]> {
+  return this.httpClient.get<Motos[]>(this.apiUrl + '?/marque=' + marque)
 }
 
 }
